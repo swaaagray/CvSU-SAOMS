@@ -1,0 +1,524 @@
+/* Custom styles for the application */
+
+/* Card styling */
+.card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5c636a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
+}
+
+/* Form controls */
+.form-control, .form-select {
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Table styling */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Image gallery */
+.img-gallery {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.img-gallery img {
+    transition: transform 0.3s ease;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Page header - Standardized styling */
+.page-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Standardized page title styling */
+.page-title {
+    color: #343a40;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Alternative header styling for different contexts */
+.header-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+}
+
+.header-title {
+    color: #343a40;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.header-description {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Responsive header adjustments */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.5rem;
+        margin-top: 1rem; /* Add top margin for mobile */
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .header-title {
+        font-size: 1.5rem;
+        margin-top: 1rem; /* Add top margin for mobile */
+    }
+    
+    .header-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra spacing for mobile devices */
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 1.25rem;
+        margin-top: 1.5rem !important; /* Extra top margin on small mobile */
+        margin-bottom: 0.75rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* Ensure container-fluid has proper top padding */
+    main > .container-fluid {
+        padding-top: 1rem !important;
+    }
+    
+    /* Fix for pages with d-flex header containers */
+    main .d-flex.justify-content-between {
+        margin-top: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    main .d-flex.justify-content-between > div:first-child {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Filter section */
+.filter-section {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   COMPREHENSIVE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Table responsive wrapper */
+    .table-responsive {
+        border-radius: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Table adjustments */
+    .table {
+        font-size: 0.85rem;
+        min-width: 600px; /* Ensure horizontal scroll on very small screens */
+    }
+    
+    .table thead th,
+    .table td {
+        padding: 0.5rem 0.4rem;
+        white-space: nowrap;
+    }
+    
+    /* Form adjustments */
+    .form-control,
+    .form-select {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 10px 12px;
+    }
+    
+    /* Button groups stack vertically */
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        border-radius: 0.375rem !important;
+    }
+    
+    /* Card body padding */
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Modal adjustments */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+    
+    .modal-content {
+        border-radius: 0.5rem;
+    }
+    
+    /* Dropdown adjustments */
+    .dropdown-menu {
+        max-width: calc(100vw - 2rem);
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    /* Filter sections stack */
+    .filter-section .row > * {
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Pagination adjustments */
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pagination .page-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Alert adjustments */
+    .alert {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Badge adjustments */
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.35em 0.65em;
+    }
+}
+
+/* Mobile devices (576px and below) */
+@media (max-width: 576px) {
+    /* Further reduce padding */
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    /* Smaller table font */
+    .table {
+        font-size: 0.75rem;
+    }
+    
+    .table thead th,
+    .table td {
+        padding: 0.4rem 0.3rem;
+    }
+    
+    /* Stack form groups */
+    .row .col-md-6,
+    .row .col-md-4,
+    .row .col-md-3 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Full width buttons */
+    .btn {
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Smaller modal */
+    .modal-dialog {
+        margin: 0.25rem;
+        max-width: calc(100% - 0.5rem);
+    }
+    
+    /* Compact dropdown */
+    .dropdown-menu {
+        font-size: 0.875rem;
+        padding: 0.5rem 0;
+    }
+    
+    /* Smaller pagination */
+    .pagination {
+        font-size: 0.875rem;
+    }
+    
+    .pagination .page-link {
+        padding: 0.375rem 0.5rem;
+    }
+    
+    /* Image gallery adjustments */
+    .img-gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Hide less important columns in tables */
+    .table-responsive .table th.d-none-mobile,
+    .table-responsive .table td.d-none-mobile {
+        display: none !important;
+    }
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+    /* Even more compact */
+    .card-body {
+        padding: 0.5rem;
+    }
+    
+    .table {
+        font-size: 0.7rem;
+    }
+    
+    .table thead th,
+    .table td {
+        padding: 0.3rem 0.2rem;
+    }
+    
+    /* Smaller buttons */
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Compact forms */
+    .form-control,
+    .form-select {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    
+    /* Stack action buttons in tables */
+    .table td:last-child .btn-group,
+    .table td:last-child .btn {
+        display: block;
+        width: 100%;
+        margin: 0.2rem 0;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 991.98px) and (orientation: landscape) {
+    .sidebar {
+        height: calc(100vh - 56px);
+    }
+    
+    main {
+        padding: 10px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .sidebar,
+    .navbar,
+    .btn,
+    .pagination,
+    .sidebar-toggle {
+        display: none !important;
+    }
+    
+    main {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ============================================
+   MOBILE UTILITY CLASSES
+   ============================================ */
+
+/* Hide on mobile */
+@media (max-width: 576px) {
+    .d-mobile-none {
+        display: none !important;
+    }
+}
+
+/* Show only on mobile */
+.d-mobile-only {
+    display: none !important;
+}
+
+@media (max-width: 576px) {
+    .d-mobile-only {
+        display: block !important;
+    }
+}
+
+/* Full width on mobile */
+@media (max-width: 576px) {
+    .w-mobile-100 {
+        width: 100% !important;
+    }
+}
+
+/* Stack flex items on mobile */
+@media (max-width: 768px) {
+    .flex-mobile-column {
+        flex-direction: column !important;
+    }
+}
+
+/* Center text on mobile */
+@media (max-width: 576px) {
+    .text-mobile-center {
+        text-align: center !important;
+    }
+}
+
+/* Smaller font on mobile */
+@media (max-width: 576px) {
+    .fs-mobile-sm {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Compact spacing on mobile */
+@media (max-width: 576px) {
+    .mb-mobile-2 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .p-mobile-2 {
+        padding: 0.5rem !important;
+    }
+}
+
+/* Touch-friendly button sizes */
+@media (max-width: 576px) {
+    .btn-touch {
+        min-height: 44px; /* iOS recommended touch target */
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Prevent text selection on mobile (for better UX) */
+@media (max-width: 576px) {
+    .no-select {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+} 
